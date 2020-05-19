@@ -21,7 +21,7 @@ def findSubsetSumNaive(numSet, target):
     sumAccum(numSet, target, [])
     return total
 
-list1 = [1, 2, 3, 4]
+list1 = [1, 2, 3, 4] 
 print(str(list1) + " has subset-sum of 3: " + str(existsSubsetSumNaive(list1, 3)) \
     + " of " + str(findSubsetSumNaive(list1, 3)))
 list2 = [-1, 2, 3, 5, 6, 7]
@@ -34,7 +34,7 @@ print(str(list1) + " has subset-sum of 11: " + str(existsSubsetSumNaive(list1, 1
 
 # DP, does subset sum exist for certain target
 def existsSubsetSumDP(numSet, target):
-    existsMemo = ([False for i in range(target + 1)] for j in range(len(numSet) + 1)])
+    existsMemo = [[False for i in range(target + 1)] for j in range(len(numSet) + 1)]
 
     for i in range(len(numSet + 1)):
         existsMemo[i][0] = True
